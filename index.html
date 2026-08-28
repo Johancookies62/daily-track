@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ecefe4">
+  <title>DAILY TRACK</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="dashboard">
+    <header class="topbar">
+      <div id="clock">00:00</div>
+
+      <div class="status">
+        <span>DAILY TRACK</span>
+        <span class="status-dot"></span>
+        <span id="today-date">Loading date...</span>
+      </div>
+
+      <button class="menu-button" aria-label="Open menu">☰</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <p class="eyebrow">TODAY'S PROGRESS</p>
+
+        <div class="progress-row">
+          <button id="reset-day" class="round-button" aria-label="Reset today's habits">↺</button>
+          <h1><span id="completed-count">0</span> / <span id="habit-count">6</span></h1>
+          <div class="progress-text">
+            <strong>DAILY SYSTEMS</strong>
+            <span>Build consistency, not perfection.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ring-wrap" aria-label="Daily completion percentage">
+        <div class="progress-ring">
+          <span id="progress-percent">0%</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-grid">
+      <article class="panel focus-panel">
+        <p class="eyebrow">FOCUS SESSION</p>
+
+        <div class="timer-display" id="timer-display">50:00</div>
+
+        <div class="timer-actions">
+          <button class="timer-choice active" data-minutes="50">50 MIN</button>
+          <button class="timer-choice" data-minutes="90">90 MIN</button>
+          <button class="timer-choice" data-minutes="25">25 MIN</button>
+        </div>
+
+        <button id="timer-button" class="primary-button">START FOCUS</button>
+      </article>
+
+    <article class="panel weather-panel">
+     <div class="weather-header">
+        <p class="eyebrow">JAKARTA CONDITIONS</p>
+
+        <button id="refresh-weather" class="weather-refresh" type="button">
+         REFRESH
+        </button>
+     </div>
+
+     <div class="weather-main">
+        <span id="weather-icon" class="weather-icon">...</span>
+        <span id="weather-temperature" class="temperature">--°</span>
+     </div>
+
+     <div class="weather-data">
+        <div>
+         <span>HUMIDITY</span>
+         <strong id="weather-humidity">--%</strong>
+        </div>
+
+        <div>
+          <span>RAIN RISK</span>
+          <strong id="weather-rain-risk">--%</strong>
+        </div>
+
+        <div>
+          <span>STATUS</span>
+          <strong id="weather-status">Loading</strong>
+        </div>
+     </div>
+
+     <p id="weather-updated" class="panel-note">
+       Loading Jakarta weather...
+     </p>
+    </article>
+    
+    </section>
+
+    <section class="habits-section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">DAILY CHECK-IN</p>
+          <h2>HABITS</h2>
+        </div>
+
+        <span id="weekly-score" class="weekly-score">TODAY: 0 / 6</span>
+      </div>
+
+      <div id="habit-list" class="habit-list"></div>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="panel spotify-panel">
+        <div>
+          <p class="eyebrow">NOW PLAYING</p>
+          <h3>Spotify</h3>
+          <p class="panel-note">Open music and choose your focus playlist.</p>
+        </div>
+
+        <a class="spotify-button" href="https://open.spotify.com/" target="_blank" rel="noopener">
+          OPEN SPOTIFY ↗
+        </a>
+      </article>
+
+      <article class="panel idea-panel">
+        <p class="eyebrow">IDEA CAPTURE</p>
+
+        <textarea
+          id="idea-note"
+          placeholder="Club design, finishing idea, content concept, supplier note..."
+        ></textarea>
+
+        <button id="save-note" class="secondary-button">SAVE NOTE</button>
+        <span id="note-status" class="note-status"></span>
+      </article>
+    </section>
+
+    <footer>
+      DAILY TRACK · LOCAL TABLET EDITION
+    </footer>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
