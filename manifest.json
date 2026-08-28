@@ -1,0 +1,14 @@
+{
+  "name": "Daily Track",
+  "short_name": "Daily Track",
+  "description": "A personal dashboard for habits, focus, check-ins, and daily tools.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#e9ede2",
+  "theme_color": "#e9ede2",
+  "lang": "en",
+  "categories": ["productivity", "lifestyle"],
+  "icons": []
+}
